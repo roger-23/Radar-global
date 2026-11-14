@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1220"><title>Radar Global</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1220;--panel:#142238;--line:#2a3b54;--muted:#a7b5c9;--text:#edf4ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px system-ui,Arial,sans-serif}
+header{padding:26px 18px;background:linear-gradient(130deg,#17365b,#0b1220);border-bottom:1px solid var(--line)}
+main,.wrap{max-width:1050px;margin:auto}main{padding:18px}.tag{color:#9bcaff;font-size:12px;letter-spacing:1px}
+h1{margin:8px 0;font-size:28px}h2{font-size:18px;margin:0 0 14px}.muted,p{color:var(--muted);line-height:1.55}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}.chart{height:390px}
+.links{display:flex;flex-wrap:wrap;gap:9px}.links a{color:var(--text);text-decoration:none;background:#203653;border:1px solid #3b5677;border-radius:9px;padding:10px 13px}
+.note{font-size:12px;color:var(--muted)}footer{text-align:center;padding:18px;color:var(--muted);font-size:12px}
+</style></head>
+<body>
+<header><div class="wrap"><span class="tag">RADAR DE MERCADO · BRASIL + EXTERIOR</span><h1>Radar Global</h1><p>Acompanhe índices, ações, moedas e commodities em um só lugar.</p></div></header>
+<main>
+<section class="card"><h2>Visão geral do mercado</h2><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div>
+<script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"BMFBOVESPA:IBOV","title":"Ibovespa"},{"proName":"SP:SPX","title":"S&P 500"},{"proName":"NASDAQ:NDX","title":"Nasdaq 100"},{"proName":"FX_IDC:USDBRL","title":"Dólar/Real"},{"proName":"TVC:UKOIL","title":"Brent"},{"proName":"AMEX:GLD","title":"Ouro"}],"showSymbolLogo":true,"isTransparent":true,"displayMode":"adaptive","colorTheme":"dark","locale":"br"}</script></div></section>
+<div class="grid">
+<section class="card"><h2>Ibovespa</h2><div class="chart"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>{"symbol":"BMFBOVESPA:IBOV","width":"100%","height":"100%","locale":"br","dateRange":"1M","colorTheme":"dark","isTransparent":true,"autosize":true}</script></div></div></section>
+<section class="card"><h2>S&P 500</h2><div class="chart"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>{"symbol":"SP:SPX","width":"100%","height":"100%","locale":"br","dateRange":"1M","colorTheme":"dark","isTransparent":true,"autosize":true}</script></div></div></section>
+</div>
+<section class="card"><h2>Ativos para acompanhar</h2><div class="links">
+<a href="https://www.tradingview.com/symbols/BMFBOVESPA-PETR4/" target="_blank" rel="noopener">PETR4</a>
+<a href="https://www.tradingview.com/symbols/BMFBOVESPA-VALE3/" target="_blank" rel="noopener">VALE3</a>
+<a href="https://www.tradingview.com/symbols/BMFBOVESPA-ITUB4/" target="_blank" rel="noopener">ITUB4</a>
+<a href="https://www.tradingview.com/symbols/NYSE-PEP/" target="_blank" rel="noopener">PepsiCo</a>
+<a href="https://www.tradingview.com/symbols/NYSE-KO/" target="_blank" rel="noopener">Coca-Cola</a>
+<a href="https://www.tradingview.com/symbols/NASDAQ-MSFT/" target="_blank" rel="noopener">Microsoft</a>
+<a href="https://www.tradingview.com/symbols/NASDAQ-NVDA/" target="_blank" rel="noopener">NVIDIA</a>
+<a href="https://www.tradingview.com/markets/stocks-brazil/market-movers-all-stocks/" target="_blank" rel="noopener">Ações Brasil</a>
+<a href="https://www.tradingview.com/markets/stocks-usa/market-movers-all-stocks/" target="_blank" rel="noopener">Ações EUA</a>
+</div><p class="note">Toque em um ativo para abrir gráficos, indicadores e dados detalhados.</p></section>
+<section class="card"><h2>Mapa de mercado</h2><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div>
+<script src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>{"colorTheme":"dark","dateRange":"12M","showChart":true,"locale":"br","width":"100%","height":"500","isTransparent":true,"showSymbolLogo":true,"tabs":[{"title":"Índices","symbols":[{"s":"BMFBOVESPA:IBOV","d":"Ibovespa"},{"s":"SP:SPX","d":"S&P 500"},{"s":"NASDAQ:NDX","d":"Nasdaq 100"}]},{"title":"Ações","symbols":[{"s":"BMFBOVESPA:PETR4","d":"Petrobras"},{"s":"BMFBOVESPA:VALE3","d":"Vale"},{"s":"NYSE:KO","d":"Coca-Cola"},{"s":"NYSE:PEP","d":"PepsiCo"}]},{"title":"Moedas e commodities","symbols":[{"s":"FX_IDC:USDBRL","d":"Dólar/Real"},{"s":"TVC:UKOIL","d":"Brent"},{"s":"AMEX:GLD","d":"Ouro"}]}]}</script></div></section>
+<section class="card"><h2>Sobre o radar</h2><p>Este painel é para acompanhamento e pesquisa. Ele ainda não calcula um ranking automático de oportunidades nem emite sinais de compra ou venda. Antes de avaliar um ativo, analise fundamentos, valuation, endividamento, fluxo de caixa, riscos e tendência.</p><p class="note">Cotações e gráficos são fornecidos pelo TradingView; atualização e eventuais atrasos dependem da bolsa e da fonte de dados. É necessário estar conectado à internet.</p></section>
+</main><footer>Radar Global · Ferramenta educacional · Não é recomendação de investimento.</footer>
+</body></html>
