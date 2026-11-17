@@ -1,0 +1,12 @@
+{
+  "generatedAt": null,
+  "provider": "Yahoo Finance via yfinance",
+  "methodology": "Aguardando primeira execução automática do ranking.",
+  "quality": [],
+  "opportunities": [],
+  "coverage": {
+    "analyzed": 0,
+    "universe": 28,
+    "errors": []
+  }
+}
