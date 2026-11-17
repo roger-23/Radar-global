@@ -10,19 +10,33 @@ header{padding:26px 18px;background:linear-gradient(130deg,#17365b,#0b1220);bord
 main,.wrap{max-width:1050px;margin:auto}main{padding:18px}.tag{color:#9bcaff;font-size:12px;letter-spacing:1px}
 h1{margin:8px 0;font-size:28px}h2{font-size:18px;margin:0 0 14px}.muted,p{color:var(--muted);line-height:1.55}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:16px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}.chart{height:390px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.chart-card{min-width:0;background:#101c2e;border:1px solid var(--line);border-radius:12px;padding:12px}
+.chart{height:300px}.asset-head{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:8px}
+.asset-name{font-weight:700}.asset-meta{font-size:12px;color:var(--muted);margin-top:3px}
+.score{font-size:12px;color:#a9d2ff;background:#1b3554;border-radius:20px;padding:5px 8px;white-space:nowrap}
+.reason{font-size:12px;color:var(--muted);min-height:34px;line-height:1.45;margin:8px 0 0}
+.status{font-size:12px;color:var(--muted);margin:0 0 12px}.status strong{color:#d8e8ff}
 .links{display:flex;flex-wrap:wrap;gap:9px}.links a{color:var(--text);text-decoration:none;background:#203653;border:1px solid #3b5677;border-radius:9px;padding:10px 13px}
 .note{font-size:12px;color:var(--muted)}footer{text-align:center;padding:18px;color:var(--muted);font-size:12px}
+@media(max-width:680px){.grid{grid-template-columns:1fr}.chart{height:280px}main{padding:12px}header{padding:22px 16px}}
 </style></head>
 <body>
 <header><div class="wrap"><span class="tag">RADAR DE MERCADO · BRASIL + EXTERIOR</span><h1>Radar Global</h1><p>Acompanhe índices, ações, moedas e commodities em um só lugar.</p></div></header>
 <main>
 <section class="card"><h2>Visão geral do mercado</h2><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div>
 <script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"BMFBOVESPA:IBOV","title":"Ibovespa"},{"proName":"SP:SPX","title":"S&P 500"},{"proName":"NASDAQ:NDX","title":"Nasdaq 100"},{"proName":"FX_IDC:USDBRL","title":"Dólar/Real"},{"proName":"TVC:UKOIL","title":"Brent"},{"proName":"AMEX:GLD","title":"Ouro"}],"showSymbolLogo":true,"isTransparent":true,"displayMode":"adaptive","colorTheme":"dark","locale":"br"}</script></div></section>
-<div class="grid">
-<section class="card"><h2>Ibovespa</h2><div class="chart"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>{"symbol":"BMFBOVESPA:IBOV","width":"100%","height":"100%","locale":"br","dateRange":"1M","colorTheme":"dark","isTransparent":true,"autosize":true}</script></div></div></section>
-<section class="card"><h2>S&P 500</h2><div class="chart"><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>{"symbol":"SP:SPX","width":"100%","height":"100%","locale":"br","dateRange":"1M","colorTheme":"dark","isTransparent":true,"autosize":true}</script></div></div></section>
-</div>
+
+<section class="card">
+<h2>Radar de ações</h2>
+<p class="status" id="radar-status">Buscando a seleção mais recente...</p>
+<h2>4 empresas de qualidade</h2>
+<div class="grid" id="quality-grid"><p>Carregando análise...</p></div>
+<div style="height:16px"></div>
+<h2>2 oportunidades em observação</h2>
+<div class="grid" id="opportunity-grid"><p>Carregando análise...</p></div>
+<p class="note">A seleção é recalculada em dias úteis e carregada novamente sempre que esta página é aberta. A cobertura é limitada ao universo de empresas configurado no radar.</p>
+</section>
+
 <section class="card"><h2>Ativos para acompanhar</h2><div class="links">
 <a href="https://www.tradingview.com/symbols/BMFBOVESPA-PETR4/" target="_blank" rel="noopener">PETR4</a>
 <a href="https://www.tradingview.com/symbols/BMFBOVESPA-VALE3/" target="_blank" rel="noopener">VALE3</a>
@@ -34,8 +48,69 @@ h1{margin:8px 0;font-size:28px}h2{font-size:18px;margin:0 0 14px}.muted,p{color:
 <a href="https://www.tradingview.com/markets/stocks-brazil/market-movers-all-stocks/" target="_blank" rel="noopener">Ações Brasil</a>
 <a href="https://www.tradingview.com/markets/stocks-usa/market-movers-all-stocks/" target="_blank" rel="noopener">Ações EUA</a>
 </div><p class="note">Toque em um ativo para abrir gráficos, indicadores e dados detalhados.</p></section>
+
 <section class="card"><h2>Mapa de mercado</h2><div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div>
 <script src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>{"colorTheme":"dark","dateRange":"12M","showChart":true,"locale":"br","width":"100%","height":"500","isTransparent":true,"showSymbolLogo":true,"tabs":[{"title":"Índices","symbols":[{"s":"BMFBOVESPA:IBOV","d":"Ibovespa"},{"s":"SP:SPX","d":"S&P 500"},{"s":"NASDAQ:NDX","d":"Nasdaq 100"}]},{"title":"Ações","symbols":[{"s":"BMFBOVESPA:PETR4","d":"Petrobras"},{"s":"BMFBOVESPA:VALE3","d":"Vale"},{"s":"NYSE:KO","d":"Coca-Cola"},{"s":"NYSE:PEP","d":"PepsiCo"}]},{"title":"Moedas e commodities","symbols":[{"s":"FX_IDC:USDBRL","d":"Dólar/Real"},{"s":"TVC:UKOIL","d":"Brent"},{"s":"AMEX:GLD","d":"Ouro"}]}]}</script></div></section>
-<section class="card"><h2>Sobre o radar</h2><p>Este painel é para acompanhamento e pesquisa. Ele ainda não calcula um ranking automático de oportunidades nem emite sinais de compra ou venda. Antes de avaliar um ativo, analise fundamentos, valuation, endividamento, fluxo de caixa, riscos e tendência.</p><p class="note">Cotações e gráficos são fornecidos pelo TradingView; atualização e eventuais atrasos dependem da bolsa e da fonte de dados. É necessário estar conectado à internet.</p></section>
+<section class="card"><h2>Como funciona o radar</h2><p>As quatro empresas de qualidade são ordenadas por indicadores como rentabilidade, margens, endividamento e geração de caixa. As duas oportunidades são selecionadas por uma combinação de valuation, crescimento e comportamento recente do preço.</p><p>As pontuações são filtros quantitativos experimentais, não uma avaliação completa da empresa. Dados ausentes, diferenças entre setores, eventos extraordinários e defasagens da fonte podem afetar o resultado. Confira os demonstrativos e o contexto antes de tomar qualquer decisão.</p><p class="note">Dados fundamentalistas e históricos: Yahoo Finance via yfinance. Gráficos e cotações exibidos: TradingView. Atualização automática em dias úteis, sujeita à disponibilidade das fontes.</p></section>
 </main><footer>Radar Global · Ferramenta educacional · Não é recomendação de investimento.</footer>
+<script>
+function addChart(asset, target, group) {
+  const card = document.createElement("article");
+  card.className = "chart-card";
+  const head = document.createElement("div");
+  head.className = "asset-head";
+  const info = document.createElement("div");
+  const name = document.createElement("div");
+  name.className = "asset-name";
+  name.textContent = asset.name + " · " + asset.ticker;
+  const meta = document.createElement("div");
+  meta.className = "asset-meta";
+  meta.textContent = asset.market + " · " + (asset.sector || "Setor não informado");
+  info.append(name, meta);
+  const score = document.createElement("span");
+  score.className = "score";
+  score.textContent = "Nota " + (group === "quality" ? asset.qualityScore : asset.opportunityScore) + "/100";
+  head.append(info, score);
+  const chart = document.createElement("div");
+  chart.className = "chart";
+  const container = document.createElement("div");
+  container.className = "tradingview-widget-container";
+  const widget = document.createElement("div");
+  widget.className = "tradingview-widget-container__widget";
+  container.append(widget);
+  chart.append(container);
+  const script = document.createElement("script");
+  script.src = "https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js";
+  script.async = true;
+  script.textContent = JSON.stringify({symbol:asset.tvSymbol,width:"100%",height:"100%",locale:"br",dateRange:"6M",colorTheme:"dark",isTransparent:true,autosize:true});
+  container.append(script);
+  const reason = document.createElement("p");
+  reason.className = "reason";
+  reason.textContent = (asset.reasons || []).join(" · ");
+  card.append(head, chart, reason);
+  target.append(card);
+}
+async function loadRadar() {
+  const status = document.getElementById("radar-status");
+  const q = document.getElementById("quality-grid");
+  const o = document.getElementById("opportunity-grid");
+  try {
+    const response = await fetch("./ranking.json?ts=" + Date.now(), {cache:"no-store"});
+    if (!response.ok) throw new Error("Ranking ainda não publicado");
+    const data = await response.json();
+    if (!data.quality || data.quality.length !== 4 || !data.opportunities || data.opportunities.length !== 2) {
+      throw new Error("A primeira análise automática ainda está sendo preparada");
+    }
+    q.replaceChildren(); o.replaceChildren();
+    data.quality.forEach(asset => addChart(asset,q,"quality"));
+    data.opportunities.forEach(asset => addChart(asset,o,"opportunity"));
+    const date = data.generatedAt ? new Date(data.generatedAt).toLocaleString("pt-BR") : "data indisponível";
+    status.textContent = "Última análise: " + date + " · " + data.coverage.analyzed + "/" + data.coverage.universe + " empresas analisadas";
+  } catch (error) {
+    status.textContent = error.message + ". O ranking aparecerá aqui assim que a rotina do GitHub concluir a primeira execução.";
+    q.replaceChildren(); o.replaceChildren();
+  }
+}
+loadRadar();
+</script>
 </body></html>
