@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T19:14:08.838685+00:00",
+  "generatedAt": "2026-11-23T22:52:13.143527+00:00",
   "provider": "Yahoo Finance via yfinance",
   "methodology": "Pontuações heurísticas próprias; não são recomendação. Universo limitado à lista configurada.",
   "quality": [
@@ -8,17 +8,17 @@
       "name": "NVIDIA",
       "market": "EUA",
       "tvSymbol": "NASDAQ:NVDA",
-      "price": 133.05,
+      "price": 165.05,
       "currency": "USD",
       "qualityScore": 45.0,
-      "opportunityScore": 66.7,
-      "forwardPE": 8.0,
-      "momentum6m": -37.9,
+      "opportunityScore": 73.0,
+      "forwardPE": 9.9,
+      "momentum6m": -22.2,
       "reasons": [
         "ROE 117.4%",
         "margem líquida 62.5%",
         "dívida/patrimônio 14",
-        "P/L 8.0"
+        "P/L 9.9"
       ],
       "sector": "Technology"
     },
@@ -27,17 +27,17 @@
       "name": "Exxon Mobil",
       "market": "EUA",
       "tvSymbol": "NYSE:XOM",
-      "price": 161.21,
+      "price": 156.9,
       "currency": "USD",
       "qualityScore": 42.1,
-      "opportunityScore": 81.5,
-      "forwardPE": 12.9,
-      "momentum6m": 9.0,
+      "opportunityScore": 80.8,
+      "forwardPE": 12.6,
+      "momentum6m": 7.4,
       "reasons": [
         "ROE 15.5%",
         "margem líquida 10.5%",
         "dívida/patrimônio 13",
-        "P/L 12.9"
+        "P/L 12.6"
       ],
       "sector": "Energy"
     },
@@ -46,17 +46,17 @@
       "name": "Broadcom",
       "market": "EUA",
       "tvSymbol": "NASDAQ:AVGO",
-      "price": 305.92,
+      "price": 313.55,
       "currency": "USD",
       "qualityScore": 41.7,
-      "opportunityScore": 75.8,
-      "forwardPE": 15.8,
-      "momentum6m": -27.3,
+      "opportunityScore": 76.7,
+      "forwardPE": 16.2,
+      "momentum6m": -25.4,
       "reasons": [
         "ROE 44.2%",
         "margem líquida 42.9%",
         "dívida/patrimônio 60",
-        "P/L 15.8"
+        "P/L 16.2"
       ],
       "sector": "Technology"
     },
@@ -65,17 +65,17 @@
       "name": "Meta Platforms",
       "market": "EUA",
       "tvSymbol": "NASDAQ:META",
-      "price": 565.39,
+      "price": 597.6,
       "currency": "USD",
       "qualityScore": 40.5,
-      "opportunityScore": 77.3,
-      "forwardPE": 15.8,
-      "momentum6m": -7.5,
+      "opportunityScore": 78.5,
+      "forwardPE": 16.8,
+      "momentum6m": -5.8,
       "reasons": [
         "ROE 32.3%",
         "margem líquida 31.1%",
         "dívida/patrimônio 42",
-        "P/L 15.8"
+        "P/L 16.8"
       ],
       "sector": "Communication Services"
     }
@@ -86,17 +86,17 @@
       "name": "Fleury",
       "market": "Brasil",
       "tvSymbol": "BMFBOVESPA:FLRY3",
-      "price": 21.51,
+      "price": 21.73,
       "currency": "BRL",
-      "qualityScore": 30.5,
-      "opportunityScore": 85.3,
-      "forwardPE": 12.8,
-      "momentum6m": 40.1,
+      "qualityScore": 34.6,
+      "opportunityScore": 86.2,
+      "forwardPE": 13.0,
+      "momentum6m": 39.5,
       "reasons": [
-        "ROE 12.6%",
-        "margem líquida 8.0%",
-        "dívida/patrimônio 98",
-        "P/L 12.8"
+        "ROE 14.0%",
+        "margem líquida 8.6%",
+        "dívida/patrimônio 115",
+        "P/L 13.0"
       ],
       "sector": "Healthcare"
     },
@@ -105,17 +105,17 @@
       "name": "Microsoft",
       "market": "EUA",
       "tvSymbol": "NASDAQ:MSFT",
-      "price": 488.83,
+      "price": 492.5,
       "currency": "USD",
       "qualityScore": 39.3,
-      "opportunityScore": 81.1,
-      "forwardPE": 20.2,
-      "momentum6m": 17.9,
+      "opportunityScore": 81.5,
+      "forwardPE": 20.3,
+      "momentum6m": 19.8,
       "reasons": [
         "ROE 34.2%",
         "margem líquida 41.2%",
         "dívida/patrimônio 28",
-        "P/L 20.2"
+        "P/L 20.3"
       ],
       "sector": "Technology"
     }
